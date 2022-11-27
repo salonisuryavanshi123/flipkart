@@ -10,9 +10,15 @@
     <!--
         HTML Comment
         <link rel="icon" href="./favicon.png" type="image/gif" sizes="16*16">
-    -->    
+    --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
+        body{
+            font-family: font-family: 'Roboto',Arial, sans-serif;
+        }
         .s_tbdr{
             border: 1px dashed red;
         }
@@ -47,17 +53,29 @@
         .s_plus{
             /*
                 CSS Syntax
-                background: bg-color bg-image position/bg-size bg-repeat bg-origin; bg clip bg-attachment initial|inherit;
+                background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
             */    
             background-image: url("./img/logo/plus.png"); 
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right center;
         }
-        @media (min-width: 1400px){
-            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
-                 max-width: 1248px;
+        .s_headerform input[type="text"]:focus{
+             box-shadow: none;
         }
+        .s_headerform input[type="text"]:focus + div.s_inputsearchhint{
+            display: block !important;
+        }
+        .s_inputsearchhint{
+           height: 400px;
+        }
+        .s_inputsearchhint a:hover{
+            background: lightblue;
+        }
+        @media (min-width: 1400px){
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+                 max-width: 1248px;
+            }
         }
     </style>
 </head>
@@ -67,21 +85,52 @@
             <div class="s_header_top s_tbdr">
                 <div class="container s_tbdr h-100">
                     <div class="row h-100">
-                        <div class="col-1 s_tbdr h-100 p-0">
+                        <div class="col-1 s_tbdr h-100 p-1">
                             <div class="d-grid">
                               <a href="#" class="text-white">
                                 <img src="./img/logo/flipkart-plus_8d85f4.png" class="img-fluid">
                               </a> 
-                              <a href="#plus" class="text-white fst-italic s_plus" style=font-size: 0.1em !important>Explore Plus</a>
+                              <a href="#plus" class="text-white fst-italic s_plus" style="font-size:0.7em !important;">Explore Plus</a>
                             </div>  
                         </div>
-                        <div class="col-6 s_tbdr p-1">
-                            <form class="bg-white h-100 rounded-1 shadow-sm">
+                        <div class="col-6 s_tbdr p-2">
+                            <form class="bg-white h-100 rounded-1 shadow-sm s_headerform position-relative">
                                  <div class="row">
-                                      <div class="col-10">
-                                        <input class="form-control border-0 " placeholder="Search for products,brands and more"/>
+                                      <div class="col-11"> 
+                                        <input type="text" class="form-control border-0 s_myinput " placeholder="Search for products,brands and more"/>
+                                        <div class="s_inputsearchhint w-100 position-absolute d-none bg-white shadow-sm">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="d-block w-100 p-2b ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>gopro</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="bg-danger d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="bg-danger d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    <a href="#" class="bg-danger d-block w-100 p-2 ps-4"><i class="fa-sharp fa-solid fa-timer me-3"></i>smart tv</a>
+                                                </li>
+                                              </ul>
+                                        </div>
                                       </div>
-                                      <div class="col-2">
+                                      <div class="col-1">
                                         <button type="submit" class="btn float-end">
                                     <i class="fa-solid fa-magnifying-glass text-primary"></i>
                                         </button>
@@ -109,25 +158,25 @@
                               <li class="nav-item  me-4">
                                 <a class="nav-link h-100" aria-current="page" href="#">
                                     <img class="img-fluid" width="50" src="./img/grocery/grocery.webp">
-                                    Grocery
+                                    <br>Grocery
                                 </a>
                               </li>
                               <li class="nav-item  me-4">
                                 <a class="nav-link h-100" aria-current="page" href="#">
                                     <img class="img-fluid" width="50" src="./img/slider/1webp.webp">
-                                    Mobiles
+                                    <br>Mobiles
                                 </a>
                               </li>
                               <li class="nav-item  me-4">
                                 <a class="nav-link h-100" aria-current="page" href="#">
                                     <img class="img-fluid" width="50" src="./img/slider/1webp.webp">
-                                    Fashion
+                                    <br>Fashion
                                 </a>
                               </li>
                               <li class="nav-item  me-4">
                                 <a class="nav-link h-100" aria-current="page" href="#">
                                     <img class="img-fluid" width="50" src="./img/slider/1webp.webp">
-                                    Electronics
+                                    <br>Electronics
                                 </a>
                               </li>
                             </ul>
