@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!"</title>
     <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--
         HTML Comment
         <link rel="icon" href="./favicon.png" type="image/gif" sizes="16*16">
@@ -18,12 +19,13 @@
         header{
         }
         .s_header_top{
-            height: 45px;
+            height: 50px;
             background-color:  rgb(40, 116, 240);
-            z-index: 20000;
+            z-index:20000;
         }
         .s_header_bottom{
-            height: 60px;
+            margin-top: 50px;
+            height: 90px;
         }
         main{
             height: 7450px;
@@ -42,13 +44,55 @@
         .s_footer_bottom > div:last-child{
             height: 72px;
         }
+        .s_plus{
+            /*
+                CSS Syntax
+                background: bg-color bg-image position/bg-size bg-repeat bg-origin; bg clip bg-attachment initial|inherit;
+            */    
+            background-image: url("./img/logo/plus.png"); 
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right center;
+        }
+        @media (min-width: 1400px){
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+                 max-width: 1248px;
+        }
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid p-0 s_tbdr">
         <header class="s_tbdr">
             <div class="s_header_top s_tbdr">
-                <div class="container s_tbdr h-100">Header Top</div>
+                <div class="container s_tbdr h-100">
+                    <div class="row h-100">
+                        <div class="col-1 s_tbdr h-100 p-0">
+                            <div class="d-grid">
+                              <a href="#" class="text-white">
+                                <img src="./img/logo/flipkart-plus_8d85f4.png" class="img-fluid">
+                              </a> 
+                              <a href="#plus" class="text-white fst-italic s_plus" style=font-size: 0.1em !important>Explore Plus</a>
+                            </div>  
+                        </div>
+                        <div class="col-6 s_tbdr p-1">
+                            <form class="bg-white h-100 rounded-1 shadow-sm">
+                                 <div class="row">
+                                      <div class="col-10">
+                                        <input class="form-control border-0 " placeholder="Search for products,brands and more"/>
+                                      </div>
+                                      <div class="col-2">
+                                        <button type="submit" class="btn float-end">
+                                    <i class="fa-solid fa-magnifying-glass text-primary"></i>
+                                        </button>
+                                      </div>
+                                </div>
+                                  
+                            </form>
+                        </div>
+                        <div class="col-5 s_tbdr">C</div>
+                    </div>
+                </div>
             </div>
             <div class="s_header_bottom s_tbdr">
                 <div class="container s_tbdr h-100">
@@ -136,5 +180,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
 </html>
